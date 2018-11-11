@@ -1,0 +1,105 @@
+/*Selector by ID*/
+#calculator {
+    width: 248px;
+}
+
+/*Class selector*/
+.calc-row {
+    background-color: #f3f0f0;
+    width: 100%;
+    overflow: hidden;
+    /*when using float in children, the parent loses the height, giving the overflow a value resolves the issue*/
+}
+
+/*two classes selector*/
+.calc-row.calc-result-container {
+    background-color: #4c4c4c;
+    text-align: right;
+    color: #fff;
+    font-size: 48px;
+    height: 68px;
+}
+
+/*child selector with element type and class*/
+.calc-result-container span.calc-result {
+    padding: 0px 15px;
+    vertical-align: sub;
+}
+
+/*child selector with class*/
+.calc-row a {
+    width: calc(25% - 1px);
+    display: inline-block;
+    float: left;
+    /*to remove the whitespaces caused from line breaks in the editor when creating each <a> in new line*/
+    padding: 10px 0px;
+    text-align: center;
+    border: 1px solid #7B7B7B;
+    border-right: 0px;
+    border-bottom: 0px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 26px;
+}
+
+.calc-row.fade-animation a {
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    overflow: hidden;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: color, background-color;
+    transition-property: color, background-color;
+}
+
+.click-feedback {
+    background-color: #bdbdbd;
+    color: white;
+}
+
+/*first child selector with class*/
+.calc-row a:first-child {
+    width: calc(25% - 2px);
+    /*the border of each button*/
+}
+
+/*last child selector with class*/
+.calc-row a:last-child {
+    border-right: 1px solid #7B7B7B;
+    color: #fff;
+    background-color: #ff9847;
+}
+/*last child selector with class*/
+.calc-row a.click-feedback:last-child {
+    background-color: #d6803c;
+}
+
+/*mix*/
+#calculator .calc-row:nth-child(2) a {
+    border-top: 0px;
+}
+
+#calculator .calc-row:last-child a {
+    border-bottom: 1px solid #7B7B7B;
+}
+
+#calculator .calc-row:last-child a:first-child {
+    width: calc(50% - 2px);
+    /* the border of the merged button*/
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currentlysupported by Chrome and Opera */
+}

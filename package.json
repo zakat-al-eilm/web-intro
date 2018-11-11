@@ -1,0 +1,23 @@
+{
+  "name": "web-intro",
+  "version": "1.0.0",
+  "description": "Introduction to basic web technology HTML/CSS/JS - What, How and Why",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zakat-al-eilm/web-intro.git"
+  },
+  "author": "Ahmad Igbariya <ahmad.igbariya@servicenow.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zakat-al-eilm/web-intro/issues"
+  },
+  "homepage": "https://github.com/zakat-al-eilm/web-intro#readme",
+  "devDependencies": {
+    "electron": "^3.0.8"
+  }
+}
