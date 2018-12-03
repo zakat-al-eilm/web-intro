@@ -2,16 +2,19 @@
 //The function will be immediately executed
 //this will use the function's scope instead of the global scope
 (function() {
-    //Utility class that is responsibile for the calculator view
+    //Utility class that is responsible for the calculator view
     var calculatorView = {
         updateResultView: function(text) {
             resultElement.innerText = text;
         },
         showMessage: function(message) {
-            globalMessage.innerText = message;
+            globalMessageElement.innerText = message;
         }
     };
-
+    
+    /**
+     * Used as a proxy for every click handler on the calculator buttons
+     */
     function handleCalculatorKey(handler, event) {
         var key = event.target;
         if (key.matches('a')) {
@@ -40,14 +43,15 @@
      */
     function Calculator(calculatorView) {
         this.calculatorView = calculatorView;
-        this.clearState = function() {
-            this.firstNumber = "";
-            this.secondNumber = "";
-            this.operation = "";
-        };
-
         this.clearState();
     }
+
+    Calculator.prototype.clearState = function() {
+        this.firstNumber = "";
+        this.secondNumber = "";
+        this.operation = "";
+    };
+
     Calculator.prototype.handleAction = function(action) {
         switch (action) {
             case "clear":
@@ -119,13 +123,14 @@
 
     //create Calculator instance
     var calculator = new Calculator(calculatorView);
+
+    //add the click event listener on the calculator element
     calculatorElement.addEventListener("click", handleCalculatorKey.bind(this, handleCalculatorButtonClick.bind(this, calculator)));
+
     calculatorElement.addEventListener("mouseup", handleCalculatorKey.bind(this, function(key) {
-        console.log('removing click feedback effect');
         key.classList.remove('click-feedback');
     }));
     calculatorElement.addEventListener("mousedown", handleCalculatorKey.bind(this, function(key) {
-        console.log('adding click feedback effect');
         key.classList.add('click-feedback');
     }));
 
