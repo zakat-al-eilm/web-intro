@@ -1,49 +1,52 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<meta charset="utf-8">
-	<title>Simple Calculator - Running version</title>
-	<link rel="stylesheet" 
-		  type="text/css" 
-		  href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" />
-	<link rel="stylesheet" href="calc.css">
+    <meta charset="utf-8">
+    <title>Simple Calculator - Running version</title>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" />
+    <link rel="stylesheet" href="calc.css">
+    <link rel="stylesheet" href="css/iziToast.min.css">
+
 </head>
+
 <body>
-	<div id="calculator" class="noselect">
-		<div class="calc-row calc-result-container">
-			<span class="calc-result">0</span>
-		</div>
-		<div class="calc-row">
-			<a data-action="clear">AC</a>
-			<a data-action="sign">+/-</a>
-			<a data-action="percent">%</a>
-			<a data-action="divide">÷</a>
-		</div>
-		<div class="calc-row">
-			<a>7</a>
-			<a>8</a>
-			<a>9</a>
-			<a data-action="multiply">&times;</a>
-		</div>
-		<div class="calc-row">
-			<a>4</a>
-			<a>5</a>
-			<a>6</a>
-			<a data-action="add">+</a>
-		</div>
-		<div class="calc-row">
-			<a>1</a>
-			<a>2</a>
-			<a>3</a>
-			<a data-action="subtract">-</a>
-		</div>
-		<div class="calc-row">
-			<a>0</a>
-			<a data-action="decimal">.</a>
-			<a data-action="calc">=</a>
-		</div>
-	</div>
-	<div id="globalMessage"></div>
-	<script src="js/calc_es5.js" type="text/javascript" charset="utf-8"></script>
+    <div id="calculator" class="noselect">
+        <div class="calc-row calc-result-container">
+            <span class="calc-result">0</span>
+        </div>
+        <div class="calc-row">
+            <a data-action="clear">AC</a>
+            <a data-action="sign">+/-</a>
+            <a data-action="percent">%</a>
+            <a data-action="divide">÷</a>
+        </div>
+        <div class="calc-row">
+            <a>7</a>
+            <a>8</a>
+            <a>9</a>
+            <a data-action="multiply">&times;</a>
+        </div>
+        <div class="calc-row">
+            <a>4</a>
+            <a>5</a>
+            <a>6</a>
+            <a data-action="add">+</a>
+        </div>
+        <div class="calc-row">
+            <a>1</a>
+            <a>2</a>
+            <a>3</a>
+            <a data-action="subtract">-</a>
+        </div>
+        <div class="calc-row">
+            <a>0</a>
+            <a data-action="decimal">.</a>
+            <a data-action="calc">=</a>
+        </div>
+    </div>
+    <script src="js/calc_es5.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/iziToast.min.js" type="text/javascript" charset="utf-8"></script>
 </body>
+
 </html>
